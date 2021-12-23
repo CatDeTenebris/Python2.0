@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+
+
 import numpy as np
 from numpy import matrix
 import random

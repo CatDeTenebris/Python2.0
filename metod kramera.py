@@ -5,7 +5,7 @@ import numpy as np
 from numpy import matrix
 import random
 
-def menu():
+def menu():#Меню действий
     print("Выберите действие - ")
     print("Список команд:")
     print("1. Метод Крамера")
@@ -72,7 +72,7 @@ def inversia_a():#Обратная матрицв(автомат)
     return C
 
 
-def inversia():#обратная матрица
+def inversia():#Обратная матрица
     a=float(input("Введите число а = "))
     b=float(input("Введите число b = "))
     c=float(input("Введите число c = "))
@@ -90,30 +90,31 @@ def inversia():#обратная матрица
 
 while action !=0:
     action= int(input())
+#Метод Крамера
     if action == 1:
         print("Как хотите заполнить матрицу?")
         print("1. Ручками")
         print("2. Мне лень пусть сам заполняет")
         ad=int(input())
-        
+       #Крамер
         if ad == 1:
             Kram1()
             menu()
-     
+     #Крамер(автомат) 
         elif ad == 2: 
             Kram_a()
             menu()
-
+#Обратная матрица
     if action == 2:
         print("Как хотите заполнить матрицу?")
         print("1. Ручками")
         print("2. Мне лень пусть сам заполняет")
         ad =int(input())
-        #Заполнение ручками
+        #Обратная матрица
         if ad ==1:
             inversia()
             menu()
-        #
+        #Обратная матрица(автомат)
         elif ad == 2:
             inversia_a()
             menu()
